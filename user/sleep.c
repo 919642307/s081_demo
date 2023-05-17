@@ -8,9 +8,9 @@
 
 
 int main(int argc, char *argv[]){
-    //int num = atoi(argv[1]);
-
-    write(1,argv[1],strlen(argv[1]));
+    int num = atoi(argv[1]);
+    sleep(num);
+    //write(1,argv[1],strlen(argv[1]));
     exit(0);
 
 }
