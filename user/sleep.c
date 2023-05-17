@@ -6,7 +6,7 @@
 #include "kernel/stat.h"
 #include "user/user.h"
 
-
+using namespace std;
 int main(int argc, char *argv[]){
     int num = atoi(argv[1]);
     cout << num;
