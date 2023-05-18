@@ -9,19 +9,19 @@
 int main(int argc, char *argv[])
 {
     int p[2];
-    char *argv[2];
-    argv[0] = "test";
-    argv[1] = 1;
+    char *a[2];
+    a[0] = "test";
+    a[1] = "1";
     pipe(p);
     if(fork() != 0){
-        write(p[1],argv[1],1);
-        read(p[0],argv[1],1);
+        write(p[1],a[1],1);
+        read(p[0],a[1],1);
         printf("%d: received pong",getpid());
     }
     else{
-        read(p[0],argv[1],1);
+        read(p[0],a[1],1);
         printf("%d: received pong",getpid());
-        write(p[1],argv[1],1);
+        write(p[1],a[1],1);
     }
     exit(0);
 }
