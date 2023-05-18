@@ -10,18 +10,21 @@ int main(int argc, char *argv[])
 {
     int p[2];
     char *a[2];
-    a[0] = "test";
-    a[1] = "1";
+    a[0] = "ping";
+    a[1] = "pong";
+    char text[10];
     pipe(p);
     if(fork() != 0){
-        write(p[1],a[1],1);
-        read(p[0],a[1],1);
-        printf("%d: received pong\n",getpid());
+        write(p[1],a[0],10);
+        wait(0);
+        read(p[0],text,10);
+        printf("%d: received %s\n",getpid(),text);
     }
     else{
-        read(p[0],a[1],1);
-        printf("%d: received pong\n",getpid());
+        read(p[0],text,1);
+        printf("%d: received %s\n",getpid(),test);
         write(p[1],a[1],1);
+        exit(0);
     }
-    exit(0);
+
 }
