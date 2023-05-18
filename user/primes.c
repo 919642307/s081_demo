@@ -19,7 +19,7 @@ void prime(int prime_read, int prime_write)
             break;
         }
     }
-    printf("prime %d",val);
+    printf("prime %d\n",val);
     if(val == 0) {
         exit(0);
     }
