@@ -4,7 +4,7 @@
 #include "kernel/types.h"
 #include "kernel/stat.h"
 #include "user/user.h"
-#define length 36;
+#define length 36
 char num[length];
 
 void prime(prime_read, prime_write)
