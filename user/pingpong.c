@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
         printf("%d: received %s\n",getpid(),text);
     }
     else{
-        read(p[0],text,1);
+        read(p[0],text,10);
         printf("%d: received %s\n",getpid(),text);
-        write(p[1],a[1],1);
+        write(p[1],a[1],10);
         exit(0);
     }
     exit(0);
