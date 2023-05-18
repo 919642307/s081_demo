@@ -26,5 +26,5 @@ int main(int argc, char *argv[])
         write(p[1],a[1],1);
         exit(0);
     }
-    exit();
+    exit(0);
 }
