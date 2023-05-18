@@ -7,7 +7,7 @@
 #define length 36
 char num[length];
 
-void prime(prime_read, prime_write)
+void prime(int prime_read, int prime_write)
 {
     char target[length];
     read(prime_read, target, length);
