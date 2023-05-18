@@ -19,10 +19,11 @@ void prime(int prime_read, int prime_write)
             break;
         }
     }
-    printf("prime %d\n",val);
+
     if(val == 0) {
         exit(0);
     }
+    printf("prime %d\n",val);
     for(int i = 2; i < length; i++) {
         if(i >= val && i % val == 0)
         {
